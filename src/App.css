@@ -2,7 +2,47 @@
   text-align: center;
 }
 .Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+  color: rgb(255, 220, 79);
+  font-family: 'Star Jedi', sans-serif;
+  text-shadow: 0px 0 5px #ae925b;
+  /* text-decoration: underline; */
 }
 /* write your parent styles in here for your App.js */
+
+body {
+
+  color: rgb(255, 215, 0);
+  font-family: 'Bitter', serif;
+}
+h2 {
+  top: 3%;
+  left: 5%;
+  transform-origin: center left;
+}
+button, input {
+  margin: 3px;
+  color: #7a6a6a;
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 3px;
+  height: 1.8em;
+}
+
+.panel-buttons button {
+  cursor: pointer;
+  background: #9bbeff;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+}
+.hide-btn {
+  display: none;
+}
+.panel-content {
+  display: none;
+  margin-top: 15px;
+}
+.toggle-on {
+  display: block;
+}

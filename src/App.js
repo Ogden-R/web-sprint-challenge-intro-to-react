@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
+import { BASE_URL } from './constants';
+// import { linkMaker } from './components/NavHeader';
+import Details from './components/Details';
+import CharacterCard from './components/Character';
 
-const App = () => {
+
+export default function App() {
+
+  const [swData, setSWData] = useState({});
+
+  useEffect(() => {
+    axios.get(`${BASE_URL}people/`)
+    .then(res => {
+      console.log(res);
+      setSWData(res.data)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }, [])
+
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -11,9 +31,16 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      {/* <nav className="navBar">
+      </nav> */}
+      <h1 className="Header">{swData.name}</h1>
+      <div className="card-panel">
+        <CharacterCard/>
+      <div className="panel-content">
+        <Details/>
+      </div>
+      </div>
     </div>
   );
 }
 
-export default App;
