@@ -63,24 +63,36 @@ Your finished project must include all of the following requirements:
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on any the following optional goals:
 
-- [ ] Make the Character component more complex and break it into several subcomponents.
-- [ ] Use the endpoint `[GET] https://swapi.dev/api/films` (mocked in msw) to obtain movie information to render with the characters.
-- [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
-- [ ] Create transitions or animations with styled-components.
-- [ ] Use Promise.all to resolve an array of promises.
+- [-] Make the Character component more complex and break it into several subcomponents.
+- [-] Use the endpoint `[GET] https://swapi.dev/api/films` (mocked in msw) to obtain movie information to render with the characters.
+- [-] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
+- [-] Create transitions or animations with styled-components.
+- [-] Use Promise.all to resolve an array of promises.
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes to the main branch.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
-- [ ] Any changes pushed after the deadline will not receive any feedback.
+- [x] Submit via Codegrade by committing and pushing any new changes to the main branch.
+- [x] Check Codegrade for automated feedback.
+- [x] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
+- [x] Any changes pushed after the deadline will not receive any feedback.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+-React JS is NOT a framework. React JS is a User Interface Component Library built by Facebook. It is a library built in JavaScript that uses components to build out user interfaces. It tries to solve the problem of managing a lot of disparate data (complex state) without slowing down the web browser. It gives web developers the ability of writing everything out in small components that will be pieced together and rendered on to the DOM (Document Object Model, a web API used to build websites).
+The website Facebook uses a lot of data on any given Facebook page. Web developers at Facebook specifically developed React JS in order to efficiently render all of this data to the DOM and subsequently to the web browser.
+
+2. Describe component state.
+
+-The state of a component is an object that holds some information that may change over the lifetime of the component. React stores the component's state. It updates the component's state anytime the component changes.
+
+3. Describe props.
+
+-Props stands for properties. Props is kind of a read-only global variable or object. React allows web developers to pass information held on state inside of one component to another component through props.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+-A side effect is anything that affects something outside of the scope of the function being executed. The following are some examples of side effects: making asynchronous API calls for data, timers, logging, and manually updating the DOM element. Web developers can sync effects in a react component by using the Effect hook. When using the Effect hook, web developers can specify when to synchronize a particular effect with particular state/props changes.
